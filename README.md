@@ -1,6 +1,6 @@
 # jmeter-report-aggregator
 
-Tool for generation visual aggregate reports from individual jmeter test results.
+Tool for generating visual aggregate reports from individual jmeter test results.
 It assumes the test results are XML files containing httpSample tags.
 
 It will generate 3 PNG files: min.png, avg.png & max.png, that represent the aggregated
