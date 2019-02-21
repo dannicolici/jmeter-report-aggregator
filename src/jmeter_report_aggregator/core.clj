@@ -38,11 +38,9 @@
     merged-stats))
 
 (defn- validate [args]
-  (if
-   (and (nil? args)
-        (not (reduce #(and %1 (.exists (clojure.java.io/as-file %2))) true args)))
-    (throw (AssertionError. "Cannot read input xml files"))
-    args))
+  (if (reduce #(and %1 (.exists (clojure.java.io/as-file %2))) true args)
+    args
+    (throw (RuntimeException. "Cannot read input xml files"))))
 
 (defn -main [& args]
   (try
